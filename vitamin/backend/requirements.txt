@@ -1,0 +1,10 @@
+flask
+flask-cors
+gunicorn
+numpy
+Pillow
+pillow-avif
+python-dotenv
+requests
+google-genai
+tensorflow
