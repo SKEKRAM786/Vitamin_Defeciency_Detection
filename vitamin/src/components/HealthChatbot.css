@@ -1,0 +1,144 @@
+/* ========== FLOATING BUTTON ========== */
+.chatbot-float-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #0d9488;
+  color: white;
+  font-size: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  transition: transform 0.2s ease;
+}
+
+.chatbot-float-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ========== CHAT CONTAINER ========== */
+.chatbot-container {
+  position: fixed;
+  right: 25px;
+  bottom: 100px;
+  width: 330px;
+  height: 440px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  animation: slideUp 0.25s ease;
+}
+
+/* ========== HEADER ========== */
+.chatbot-header {
+  background: #0d9488;
+  color: #ffffff;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 16px 16px 0 0;
+  position: relative;
+}
+
+/* Close button */
+.chatbot-close {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ========== MESSAGES AREA ========== */
+.chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #fafafa;
+}
+
+/* User message */
+.user {
+  background: #dcf8c6;
+  padding: 8px;
+  border-radius: 10px;
+  margin: 6px;
+  text-align: right;
+  font-size: 14px;
+  max-width: 80%;
+  margin-left: auto;
+}
+
+/* Bot message */
+.bot {
+  background: #f1f1f1;
+  padding: 8px;
+  border-radius: 10px;
+  margin: 6px;
+  text-align: left;
+  font-size: 14px;
+  max-width: 80%;
+}
+
+/* ========== INPUT AREA ========== */
+.chatbot-input {
+  display: flex;
+  padding: 8px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.chatbot-input button {
+  background: #0d9488;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ========== FOOTER ========== */
+.chatbot-footer {
+  font-size: 11px;
+  text-align: center;
+  padding: 4px;
+  color: #6b7280;
+}
+
+/* ========== ANIMATION ========== */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ========== RESPONSIVE (MOBILE) ========== */
+@media (max-width: 480px) {
+  .chatbot-container {
+    width: 90%;
+    right: 5%;
+    bottom: 90px;
+  }
+}
